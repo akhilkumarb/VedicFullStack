@@ -24,6 +24,6 @@ const todoList=()=>{
             return `${checkbox} ${item.title} ${formattedDate(new Date(item.dueDate))}`;
         });
     }
-    return {all,add,markAsCompleted,overdue,dueToday,dueLater,toDisplayableList};
+    return {all, add, markAsCompleted, overdue, dueToday, dueLater, toDisplayableList};
 }
 module.exports=todoList;
