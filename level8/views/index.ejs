@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do Manager</title>
+  <!-- <link rel="stylesheet" href="/css/style.css"> -->
+<style>
+  body{
+    font-family: sans-serif;
+    background:#FFFFFF;
+}
+.Todo-Item:hover .trash-icon{
+    display: block;
+}
+
+</style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+<body>
+
+      <div class="grid grid-cols-6">
+      
+      <div class="col-start-3 col-span-2">
+      
+      <%- include('todos.ejs') %>
+      
+      
+      </div>
+      
+      </div>
+      
+
+</body>
+</html>

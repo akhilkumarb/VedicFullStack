@@ -1,0 +1,70 @@
+
+<table>
+    <h1>Over Due</h1>
+    <% for(var i = 0; i < allTodos.length; i++) { %>
+      <% var dateString = allTodos[i].dueDate; %>
+      <% var [year, month, day] = dateString.split('-'); %>
+      <% var hello = ((year < new Date().getFullYear()  && month < new Date().getMonth()+1 && day < new Date().getDate()) || (year == new Date().getFullYear()  && month < new Date().getMonth()+1 && day < new Date().getDate()) || 
+      (year == new Date().getFullYear()  && month == new Date().getMonth()+1 && day < new Date().getDate())); %>
+      <% if(hello) { %>
+        <tr>
+            <td>
+                <%= "Title  : "+allTodos[i].title %>
+                <br>
+                <%= "dueDate  : "+allTodos[i].dueDate %>
+                <br>
+                <%= "completed  : "+allTodos[i].completed %>
+                <br>
+                <br>
+              </td>
+        </tr>
+      <% } %>
+    <% } %>
+  </table>
+
+  <table>
+    <h1>Due Today</h1>
+    <% for(var i = 0; i < allTodos.length; i++) { %>
+      <% var dateString = allTodos[i].dueDate; %>
+      <% var [year, month, day] = dateString.split('-'); %>
+      <% var hello = (year == new Date().getFullYear()  && month == new Date().getMonth()+1 && day == new Date().getDate()); %>
+      <% if(hello) { %>
+        <tr>
+            <td>
+                <%= "Title  : "+allTodos[i].title %>
+                <br>
+                <%= "dueDate  : "+allTodos[i].dueDate %>
+                <br>
+                <%= "completed  : "+allTodos[i].completed %>
+                <br>
+                <br>
+              </td>
+        </tr>
+      <% } %>
+    <% } %>
+  </table>
+  
+
+
+  <table>
+    <h1>Due Later</h1>
+    <% for(var i = 0; i < allTodos.length; i++) { %>
+      <% var dateString = allTodos[i].dueDate; %>
+      <% var [year, month, day] = dateString.split('-'); %>
+      <% var hello = ((year > new Date().getFullYear()) || (year == new Date().getFullYear()  && month > new Date().getMonth()+1) || 
+      (year == new Date().getFullYear()  && month == new Date().getMonth()+1 && day > new Date().getDate())); %>
+      <% if(hello) { %>
+        <tr>
+            <td>
+                <%= "Title  : "+allTodos[i].title %>
+                <br>
+                <%= "dueDate  : "+allTodos[i].dueDate %>
+                <br>
+                <%= "completed  : "+allTodos[i].completed %>
+                <br>
+                <br>
+              </td>
+        </tr>
+      <% } %>
+    <% } %>
+  </table>

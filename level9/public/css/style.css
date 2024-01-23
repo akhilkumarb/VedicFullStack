@@ -1,0 +1,20 @@
+
+.Todo-Item:hover .trash-icon{
+    display: block;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f3f4f6; /* Adjust the background color as needed */
+  }
+
+  .todo-container {
+    border: 2px solid #e2e8f0; /* Adjust the border color as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust the box shadow as needed */
+    padding: 20px;
+    background-color: white; /* Adjust the background color as needed */
+    border-radius: 8px; /* Adjust the border radius as needed */
+  }
